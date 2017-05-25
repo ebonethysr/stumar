@@ -1,0 +1,59 @@
+﻿
+<HTML lang"en">
+<head>
+    <meta charset="UTF-8">
+    <title>LOGIN</title>
+    <meta name="viewport" content="wicth=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/Estlios.css">
+    
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Open+Sans:400,300'>
+
+    <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <header>
+       <div class="container">
+            <div class="col-xs-12 col-md-2" align="center"><img src="imagenes/escudounimag.png"style="float: left;" width="120" height="120"></div>
+            <div class="col-xs-12 col-md-8" align="center"> <h1><strong>STUMAR</strong></h1></div>
+        </div>   
+        </div>
+    </header>
+
+    <div class="container">
+
+        <div class="col-xs-12 col-md-5" id="login">
+
+            <h1><strong>Bienvenido.</strong> Por favor iniciar sesión.</h1>
+            <br>
+            <form action="datos/Login.php" method="post">
+
+                <fieldset>
+
+                    <p><input type="text" name="user" required value="Username" onBlur="if(this.value=='')this.value='Username'" onFocus="if(this.value=='Username')this.value='' "></p> <!-- JS because of IE support; better: placeholder="Username" -->
+
+                    <p><input type="password" name="pass"required value="Password" onBlur="if(this.value=='')this.value='Password'" onFocus="if(this.value=='Password')this.value='' "></p> <!-- JS because of IE support; better: placeholder="Password" -->
+
+                    <br>
+                    <input type="submit"  value="Login">
+
+                </fieldset>
+
+            </form>
+
+
+
+        </div> <!-- end login -->  
+        <div class="col-xs-12 col-md-1"  width="130" height="1000">
+        </div>
+        <div class="col-xs-12 col-md-7 .img-responsive" id="map" ><br>
+        <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script><div style='overflow:hidden;height:500px;width:800px;'><div id='gmap_canvas' style='height:500px;width:800px;'></div><div><small><a href="http://embedgooglemaps.com">embed google map</a></small></div><div><small><a href="http://directorioweblol.com">directorio de enlaces</a></small></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div><script type='text/javascript'>function init_map(){var myOptions = {zoom:16,center:new google.maps.LatLng(11.2264541,-74.18707030000002),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(11.2264541,-74.18707030000002)});infowindow = new google.maps.InfoWindow({content:'<strong>Cafeteria Central</strong><br>Universidad del Magdalena<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
+        </div>
+    <br><br>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</HTML>
